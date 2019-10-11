@@ -43,5 +43,14 @@ body {
     //40% of the view-port width --> important for the responsivness
     //imagine that there are fixed sizes written in pixels.
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    //grid-template-columns: 
+
+    //8-column layout
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; //1140/8 = 142px
+
+
+    //TEST
+    & > * {
+        padding: 40px;
+        font-size: 3rem;
+    }
 }
